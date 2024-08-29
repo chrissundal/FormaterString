@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+        <div id="app"></div>
+        <input type="text" onchange="textBox(this.value)"/>
+        <button onclick="textOutput()">Click Me</button>
+
+    <script>
+
+        let result = '';
+
+        function textBox(inputText){
+            text = inputText;   
+        }
+        
+        function textOutput(){
+            result = text.charAt(0).toUpperCase() + text.slice(1);
+            document.getElementById('app').innerHTML = `
+            <div>${result}</div>
+            `;
+        }
+    </script>
+</body>
+</html>
